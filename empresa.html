@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Empresa - Circutor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      z-index: 100;
+    }
+
+    #logo {
+      font-weight: 700;
+      font-size: 26px;
+      color: #e60012;
+      letter-spacing: 2.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      color: #000;
+      padding-bottom: 6px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2.5px;
+      background: #e60012;
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: #e60012;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 60px auto 80px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .logo img {
+      max-width: 500px;
+    }
+
+    h2 {
+      color: #e60012;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .intro-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .intro img {
+      flex: 1;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin: 40px;
+    }
+
+    .column {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .organizacion img {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 0 40px 40px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+      }
+
+      .columns {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div id="logo">ERIC</div>
+    <nav>
+      <a href="index.html">Presentación</a>
+      <a href="curriculum.html">Currículum</a>
+      <a href="empresa.html" class="active">Empresa</a>
+      <a href="diario.html">Diario</a>
+      <a href="opinion.html">Opinion Personal</a>     
+    </nav>
+  </header>
+  <div class="container">
+    <div class="logo">
+      <img src="img/logo _circutor.png" alt="Logo Circutor">
+    </div>
+    <div class="intro">
+      <div class="intro-text">
+        <h2>Datos de la empresa</h2>
+        <p>Circutor es una empresa ubicada en Viladecavalls, especializada en soluciones de eficiencia energética. Desarrolla productos como analizadores de red, cargadores eléctricos, reguladores de energía reactiva, entre otros.</p>
+        <p>Cuenta con diferentes departamentos. En mi caso, estoy asignado al departamento de Sistemas de Información (IT).</p>
+      </div>
+      <img src="img/circutor_edificio.png" alt="Edificio de Circutor">
+    </div>
+    <div class="columns">
+  <div class="column">
+    <h2>Empresas del grupo Circutor</h2>
+    <p>El grupo Circutor está compuesto por varias empresas que, aunque operan en diferentes áreas, comparten la misma misión de mejorar el uso de la energía eléctrica. Estas empresas incluyen:</p>
+    <br>
+    <ul>
+      <li><strong>Dezac:</strong> Situada en el mismo edificio que Circutor, Dezac se especializa en la automatización industrial, ofreciendo soluciones integrales que optimizan procesos y mejoran la productividad.</li>
+      <img src="img/dezac.png" alt="Logo Dezac" style="max-width:180px; margin: 10px 0;">
+      <p style="margin-left:20px;">Vial Sant Jordi s/n – 08232 Viladecavalls, Barcelona</p>
+      <br>
+
+      <li><strong>Intercap:</strong> Dedicada a la fabricación de componentes electrónicos de alta calidad, Intercap se asegura de que los productos cumplan con los estándares más exigentes del mercado.</li>
+      <img src="img/lifasa.png" alt="Logo Intercap" style="max-width:180px; margin: 10px 0;">
+      <p style="margin-left:20px;">Carrer Vallès, 32, 08130 Santa Perpètua de Mogoda, Barcelona</p>
+      <br>
+
+      <li><strong>Aplitech:</strong> Focalizada en la aplicación de tecnologías avanzadas para el desarrollo de productos innovadores, Aplitech trabaja en la intersección de la tecnología y la ingeniería.</li>
+      <img src="img/aplitech.png" alt="Logo Aplitech" style="max-width:180px; margin: 10px 0;">
+      <p style="margin-left:20px;">Pol.Ind, Carrer de la Selva, 3, 08211 Pla de la Bruguera, Barcelona</p>
+      <br>
+
+      <li><strong>Cimarlaser:</strong> Especializada en sistemas de corte y grabado láser, Cimarlaser ofrece soluciones precisas y eficientes para diversas industrias.</li>
+      <img src="img/cirmalaser.png" alt="Logo Cimarlaser" style="max-width:180px; margin: 10px 0;">
+      <p style="margin-left:20px;">Av. del Vallès, 726, 08227 Terrassa, Barcelona</p>
+      <br>
+
+      <li><strong>Instrumentalización Industrial Zurc</span>:</strong> Esta empresa se dedica a la fabricación y mantenimiento de instrumentos de medición y control industrial, asegurando la precisión y fiabilidad en diversas aplicaciones.</li>
+      <img src="img/zurc.png" alt="Logo Zurc" style="max-width:180px; margin: 10px 0;">
+      <p style="margin-left:20px;">Carrer Innovació Nº 3, Pol. Ind. Can Mitjans, 08232 Viladecavalls</p>
+    </ul>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column">
+    <p>A lo largo de mi estancia, he podido observar cómo cada una de estas empresas contribuye al objetivo común de mejorar el uso de la energía eléctrica a través de la innovación y la eficiencia. Esta experiencia me ha permitido no solo aplicar mis conocimientos técnicos, sino también comprender la importancia de la colaboración y la integración de tecnologías en entornos empresariales interconectados.</p>
+  </div>
+</div>
+
+    <div class="organizacion">
+      <h2>Organización interna del departamento</h2>
+      <img src="img/Organizacion Interna Departamento.png" alt="Organigrama Departamento IT">
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <h2>Funciones del Departamento</h2>
+        <p>El departamento IT se encarga del mantenimiento de servidores, gestión de redes, soporte técnico a empleados, gestión de cuentas corporativas, seguridad informática y administración de sistemas.</p>
+        <br>
+        <ul>
+          <li><strong>Director del Departamento:</strong> Responsable de la gestión estratégica y toma de decisiones clave dentro del departamento. Supervisa los procesos más relevantes y coordina al equipo.</li>
+          <li><strong>Administrador de Sistemas:</strong> Gestiona y mantiene el servidor, así como toda la infraestructura tecnológica asociada. Se encarga de garantizar el buen funcionamiento y la seguridad de los sistemas informáticos.</li>
+          <li><strong>Técnico/a de Atención al Usuario:</strong> Proporciona soporte técnico a los usuarios ante incidencias informáticas. Se encarga de resolver problemas y ofrecer asistencia en el uso de sistemas y aplicaciones.</li>
+          <li><strong>Equipo de Desarrollo de Software Corporativo:</strong> Diseña e implementa aplicaciones y funcionalidades específicas para cubrir las necesidades internas de la organización.</li>
+        </ul>
+      </div>
+
+      <div class="column">
+        <h2>Recursos disponibles</h2>
+        <p>Los encargados de atención al usuario disponemos de:</p>
+        <br>
+        <ul>
+          <li>Portátil</li>
+          <li>Periféricos esenciales (teclado, raton, monitor,...)</li>
+          <li>Pendrive</li>
+          <li>Tarjeta de acceso para fichar y acceder a los sitios de la empresa</li>
+          <li>Móvil de empresa</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+
+    <div class="columns">
+      <div class="column">
+        <h2>Mi contrato</h2>
+        <p>Soy <strong>becario</strong> en la empresa Circutor mediante el programa de Formación Dual.</p><br>
+        <p>Mi contrato de prácticas dual lo gestiona Zurc Instrumentalización Industrial, que es la empresa responsable de supervisar oficialmente mi formación. Sin embargo, la mayor parte de mi trabajo como técnico de soporte IT lo realizo en Circutor, donde tengo mi puesto y comparto el día a día con otros compañeros en prácticas.</p><br>
+        <p>Aunque paso la mayor parte del tiempo en Circutor, también hago visitas regulares a Zurc para tareas de mantenimiento, copias de seguridad y, de forma puntual, para resolver incidencias técnicas.</p>
+      </div>
+
+      <div class="column">
+        <h2>Beneficios de empresa</h2>
+        <p>La empresa dispone de varios beneficios como una cafeteria y a un comedor de empresa.Además, entre los beneficios de Circutor, destaca la posibilidad de elegir una cesta de Navidad, así como un paquete de bienvenida recibido al iniciar las prácticas, que incluía una mochila, libretas, una cantimplora, un pendrive, varios bolígrafos y un soporte para el móvil.<p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="columns">
+      <div class="column">
+        <h2>Horas realizadas</h2>
+        <p><strong>Horas del período de prueba:</strong> 49 horas<br>
+        <strong>Horas totales como becario:</strong> 812 horas</p>
+      </div>
+
+      <div class="column">
+        <h2>Fechas de la estancia</h2>
+        <p><strong>Período de prueba:</strong> del 10 de junio al 28 de junio de 2024</p>
+        <p><strong>Período de prácticas (Dual):</strong> del 1 de julio hasta la actualidad</p>
+      </div>
+    </div>
+    <hr>
+
+    <div class="columns">
+      <div class="column">
+        <h2>Días no realizados</h2>
+        <p>Durante el período de prácticas no realicé prácticas los siguientes días:</p>
+        <ul>
+          <li>11 de junio --> motivos escolares</li>
+          <li>1 de julio --> motivado por la empresa </li>
+          <li>1 de agosto - 30 de agosto --> vacaciones escolares </li>
+          <li>3 de septiembre --> motivos personales</li>
+          <li>14 de noviembre --> motivos personales</li>
+          <li>27 de diciembre --> motivado por la empresa</li>
+          <li>31 de diciembre --> motivado por la empresa</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+
+    <div class="columns">
+      <div class="column">
+        <h2>Relaciones profesionales y seguimiento de la estancia</h2>
+        <p><strong>Tutor del instituto:</strong> Albert Gómez </p>
+        <p><strong>Tutor de la empresa:</strong> Raul Salvador - Help Desk</p>
+        <p><strong>Comunicación con los tutores:</strong> La comunicación tanto con los tutores del instituto como con el tutor de la empresa ha sido fluida y constante, permitiendo resolver dudas y recibir orientación durante toda la DUAL.</p>
+        <p><strong>Comunicación con compañeros y usuarios:</strong> La relación con los compañeros de la empresa y los usuarios ha sido cordial y profesional, facilitando el trabajo en equipo.</p>
+        <p><strong>Valoración del seguimiento de la doble tutoria (entidad-instituto):</strong> El seguimiento conjunto entre la empresa y el instituto ha sido satisfactoria, asegurando un buen desarrollo de las prácticas y aprendizaje.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
